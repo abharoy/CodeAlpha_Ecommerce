@@ -1,0 +1,19 @@
+{
+  "name": "codealpha-ecommerce",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "CodeAlpha Task 1 - Simple E-commerce Store (HTML/CSS/JS + Express + SQLite)",
+  "scripts": {
+    "dev": "node --watch-path=server server/server.js",
+    "start": "node server/server.js",
+    "seed": "node server/seed.js"
+  },
+  "engines": { "node": ">=22.13" },
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "dotenv": "^16.6.1",
+    "express": "^4.21.2",
+    "jsonwebtoken": "^9.0.2"
+  }
+}
