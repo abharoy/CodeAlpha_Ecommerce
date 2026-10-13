@@ -1,0 +1,15 @@
+services:
+  app:
+    build: .
+    ports:
+      - "5000:5000"
+    environment:
+      # Demo default so `docker compose up` works out of the box.
+      # For a real deployment set JWT_SECRET in your shell or a .env file.
+      JWT_SECRET: ${JWT_SECRET:-codealpha-demo-secret-change-me}
+    volumes:
+      - store-data:/app/data
+    restart: unless-stopped
+
+volumes:
+  store-data:

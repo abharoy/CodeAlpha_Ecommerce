@@ -27,6 +27,7 @@ A basic e-commerce site with product listings, product details, shopping cart, u
 
 ```
 CodeAlpha_Ecommerce/
+├── Dockerfile  docker-compose.yml
 ├── server/
 │   ├── server.js            # Express app entry
 │   ├── db.js                # SQLite connection + schema
@@ -49,7 +50,20 @@ CodeAlpha_Ecommerce/
 
 `users`, `products`, `addresses`, `orders`, `order_items`
 
-## Setup
+## Run with Docker (easiest)
+
+Only [Docker Desktop](https://www.docker.com/products/docker-desktop/) is needed — no Node.js install.
+
+```bash
+git clone https://github.com/abharoy/CodeAlpha_Ecommerce.git
+cd CodeAlpha_Ecommerce
+docker compose up --build    # http://localhost:5000
+```
+
+Sample products are added automatically on first start. Data is kept in a Docker volume, so it survives restarts.
+Stop with `Ctrl+C`; `docker compose down -v` also deletes the data.
+
+## Setup (without Docker)
 
 Requires **Node.js 22.13+** (for built-in SQLite).
 
